@@ -1,0 +1,55 @@
+@font-face {
+  font-family: Micro5-Regular;
+  src: url("font/Micro5-Regular.ttf");
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  
+}
+
+body {
+  font-family: Micro5-regular;
+}
+#game-container {
+  position: relative;
+  width: 400px;
+  height: 600px;
+  border: 1px solid #000;
+}
+
+#bird {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: yellow;
+  bottom: 50%;
+  left: 50px;
+  border-radius: 50%;
+}
+
+#pipe {
+  position: absolute;
+  width: 60px;
+  height: 400px;
+  background-color: green;
+  bottom: 0;
+  left: 400px;
+}
+
+.tiny {
+  font-size: 1px;
+
+  color: #2fff00;
+}
+canvas{
+  /* height: 80vh;
+  width: 95vw; */
+  border: 1px solid black
+}
+#myCanvas{
+  border: 1px solid black
+}
