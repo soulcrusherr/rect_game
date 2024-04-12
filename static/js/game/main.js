@@ -51,10 +51,46 @@ function draw(ctx) {
   }
   player.draw();
 }
-
 window.requestAnimationFrame(gameLoop);
+let secondsPassed;
+let oldTimeStamp;
+let fps;
 
-function gameLoop() {
+function gameLoop(timeStamp) {
+  // Calculate the number of seconds passed since the last frame
+  secondsPassed = (timeStamp - oldTimeStamp) / 1000;
+  oldTimeStamp = timeStamp;
+
+  // Calculate fps
+  fps = Math.round(1 / secondsPassed);
+
+  // Draw number to the screen
+  ctx.fillStyle = "white";
+  ctx.fillRect(0, 0, 200, 100);
+  ctx.font = "25px Arial";
+  ctx.fillStyle = "black";
+  ctx.fillText("FPS: " + fps, 10, 30);
+
+  // Perform the drawing operation
   draw(ctx);
+
+  // The loop function has reached it's end. Keep requesting new frames
   window.requestAnimationFrame(gameLoop);
 }
+// window.requestAnimationFrame(gameLoop);
+// let secondsPassed;
+// let oldTimeStamp;
+// let fps;
+// function gameLoop(timestamp) {
+//   secondsPassed = (timestamp - oldTimeStamp) / 1000;
+//   oldTimeStamp = timestamp;
+//   fps = Math.round(1 / secondsPassed);
+//   ctx.fillStyle = "white";
+//   ctx.fillRect(0, 0, 200, 100);
+//   ctx.font = "25px Arial";
+//   ctx.fillStyle = "black";
+//   ctx.fillText("FPS: " + fps, 10, 30);
+//   draw(ctx);
+
+//   window.requestAnimationFrame(gameLoop);
+// }

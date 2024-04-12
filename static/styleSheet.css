@@ -50,6 +50,18 @@ canvas{
   width: 95vw; */
   border: 1px solid black
 }
+#can{
+  color: #dc0a0a;
+}
 #myCanvas{
   border: 1px solid black
+}
+
+#can{
+  background-color:  #93934a
+}
+
+#canvasss{
+
+  background-color: rgb(0, 0, 0);
 }
