@@ -24,4 +24,7 @@ app.get("/dbzsa", function (req, res) {
 app.get("/flappybird", function (req, res) {
   res.render("flappybird");
 });
+app.get("/mokePon", function (req, res) {
+  res.render("mokePon");
+});
 app.listen(3001);
